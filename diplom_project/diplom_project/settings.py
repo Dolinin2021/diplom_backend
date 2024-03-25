@@ -106,13 +106,9 @@ MIDDLEWARE = [
     'app.middleware.RequestMiddleware.RequestMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
-
-CORS_ALLOWED_ORIGINS = [
-   "http://localhost:5173",
-]
 
 MEDIA_ROOT = 'media/'
 
