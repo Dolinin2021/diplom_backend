@@ -27,16 +27,16 @@ from app.views import FileAPIListAdmin, FileAPIListUser, FileDetailAPIView, User
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('back/useradd/', UserAdd.as_view()),
-    path('back/userlist/', UserList.as_view()),
-    path('back/userlist/<int:pk>/', UserInfo.as_view()),
-    path('back/user/change/<int:pk>/', UpdateUserParams.as_view()),
-    path('back/api/v1/filelist/', FileAPIListUser.as_view()),
-    path('back/api/v1/filelist/<int:pk>/', FileAPIListAdmin.as_view()),
-    path('back/api/v1/filelist/detail/<int:pk>/', FileDetailAPIView.as_view()),
-    path('back/api/v1/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('back/api/v1/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('back/api/v1/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
+    path('useradd/', UserAdd.as_view()),
+    path('userlist/', UserList.as_view()),
+    path('userlist/<int:pk>/', UserInfo.as_view()),
+    path('user/change/<int:pk>/', UpdateUserParams.as_view()),
+    path('api/v1/filelist/', FileAPIListUser.as_view()),
+    path('api/v1/filelist/<int:pk>/', FileAPIListAdmin.as_view()),
+    path('api/v1/filelist/detail/<int:pk>/', FileDetailAPIView.as_view()),
+    path('api/v1/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/v1/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/v1/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     path('file/download/', download_share)
 ]
 
