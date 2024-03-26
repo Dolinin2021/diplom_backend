@@ -209,9 +209,9 @@ class FileDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     def put(self, request, *args, **kwargs):
         instance = File.objects.get(id=self.kwargs['pk'])
         instance.share = uuid.uuid4()
-        logging.info(f"Ссылка создана: {request.build_absolute_uri('/')}file/download/?share={instance.share}")
-        print(f"Ссылка создана: {request.build_absolute_uri('/')}file/download/?share={instance.share}")
-        instance.url = f"{request.build_absolute_uri('/')}file/download/?share={instance.share}"
+        logging.info(f"Ссылка создана: {request.build_absolute_uri('/')}backend/file/download/?share={instance.share}")
+        print(f"Ссылка создана: {request.build_absolute_uri('/')}backend/file/download/?share={instance.share}")
+        instance.url = f"{request.build_absolute_uri('/')}backend/file/download/?share={instance.share}"
         instance.save()
         return self.update(request, *args, **kwargs)
 

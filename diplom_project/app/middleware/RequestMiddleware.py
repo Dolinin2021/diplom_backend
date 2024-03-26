@@ -10,7 +10,7 @@ class RequestMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        if request.path.startswith("/files/storages/"):
+        if request.path.startswith("/backend/files/storages/"):
             logging.info(f'Скачан файл: {str(request.path).rsplit("/", 1)[-1]}'
                          f'\nОтносительный путь: {str(request.path)}'
                          f'\nВремя и дата скачивания: {datetime.datetime.now()}')
