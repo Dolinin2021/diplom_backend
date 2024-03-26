@@ -10,7 +10,7 @@ user = get_user_model()
 
 def file_path(instance, filename):
     base_filename, file_extension = os.path.splitext(filename)
-    return f'files/storages/{instance.user.id}/{base_filename}{file_extension}'
+    return f'backend/files/storages/{instance.user.id}/{base_filename}{file_extension}'
 
 
 class File (models.Model):
