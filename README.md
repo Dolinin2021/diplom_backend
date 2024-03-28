@@ -207,7 +207,8 @@ client_max_body_size 100M;
 sudo nginx -t 
 sudo systemctl reload nginx
 
-# необходимо клонировать фронтенд на локальный ПК и прописать  адрес сервера (API_URL) по пути my-app\src\common\system-var.js 
+# необходимо клонировать фронтенд на локальный ПК 
+# и прописать адрес сервера (API_URL) по пути my-app\src\common\system-var.js 
 # затем выполнить пересборку проекта с помощью команды npm run rebuild и сделать git push
 
 # клонируем фронтенд 
